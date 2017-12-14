@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width">
     <title>Al-bumz</title>
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
   </head>
   <body>
     <header>
-      <h1></h1>
+      <div class="logo">
+        <img src="img/vinyl.svg" alt="logo image">
+        <h1>Minty Fresh</h1>
+      </div>
       <div class="add-album-btn">
       </div>
     </header>
+
     <aside class="add-menu">
-      <h1></h1>
+      <h1>Add a New Album</h1>
       <form class="form-group" id="new-album">
-        <label for="title">Title</label>
+        <label for="title">Title:</label>
         <input type="text" name="title" id="title">
-        <label for="artist">Artist</label>
+        <label for="artist">Artist:</label>
         <input type="text" name="artist" id="artist">
-        <label for="year">Year</label>
+        <label for="year">Year:</label>
         <input type="text" name="year" id="year">
-        <label for="art">Artwork</label>
+        <label for="art">Artwork:</label>
         <input type="text" name="art" id="art">
         <button type="submit" name="button">Add Album</button>
       </form>
     </aside>
+
     <main class="stage">
       <button id="prev" type="button"></button>
       <div class="landing-pad">

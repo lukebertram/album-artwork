@@ -1,3 +1,23 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+header {
+  overflow: auto;
+  height: $header-height;
+  background-color: $navy;
+  display: flex;
+  font-family: $header-font;
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  h1 {
+    color: $tan;
+    letter-spacing: 2px;
+  }
+  img {
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+  }
+}

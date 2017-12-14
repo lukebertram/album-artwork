@@ -408,6 +408,12 @@ template {
 html {
   box-sizing: border-box; }
 
+body {
+  position: relative; }
+
+h1 {
+  margin: 0; }
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -493,5 +499,59 @@ body {
   padding: 0;
   position: absolute;
   width: 1px; }
+
+header {
+  overflow: auto;
+  height: 100px;
+  background-color: #272838;
+  display: flex;
+  font-family: "Bungee", cursive; }
+  header .logo {
+    display: flex;
+    align-items: center; }
+  header h1 {
+    color: #C1ABA6;
+    letter-spacing: 2px; }
+  header img {
+    height: 60px;
+    width: 60px;
+    margin: 10px; }
+
+.add-menu {
+  width: 320px;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  background-color: #C1ABA6;
+  padding: 20px;
+  border-radius: 4px;
+  z-index: 3; }
+  .add-menu h1 {
+    font-size: 1.5em;
+    text-align: center; }
+  .add-menu #new-album {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .add-menu #new-album label {
+      margin-top: 16px;
+      align-self: flex-start;
+      margin-left: 5px; }
+    .add-menu #new-album input {
+      border-radius: 4px;
+      line-height: 32px;
+      width: 100%;
+      background-color: #a6c395;
+      border-style: inset;
+      border: 2px solid #272838; }
+      .add-menu #new-album input:focus {
+        outline-color: #666892; }
+    .add-menu #new-album button {
+      margin-top: 40px;
+      height: 47px;
+      width: 167px;
+      border-radius: 7px;
+      background-color: #8BB174;
+      border: 2px solid #272838; }
 
 /*# sourceMappingURL=main.css.map */

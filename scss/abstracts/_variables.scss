@@ -1,7 +1,15 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
+$navy: #272838;
+$blue: #345995;
+$tan: #C1ABA6;
+$red: #FB4D3D;
+$green: #8BB174;
+$white: #ffffff;
+$black: #000000;
 
+$header-height: 100px;
 
 
 
@@ -9,6 +17,7 @@
 /// Regular font family
 /// @type List
 $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$header-font: 'Bungee', cursive;
 
 /// Code (monospace) font family
 /// @type List
