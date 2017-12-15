@@ -21,11 +21,13 @@
 @import
   'layout/header',
   'layout/addform',
+  'layout/mainstage',
   'layout/footer';
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/add-button';
 
 // 6. Page-specific styles
 @import

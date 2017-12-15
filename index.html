@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width">
-    <title>Al-bumz</title>
-    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <title>Minty Fresh Records</title>
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
@@ -15,6 +15,8 @@
         <h1>Minty Fresh</h1>
       </div>
       <div class="add-album-btn">
+        <div class="cross vert"></div>
+        <div class="cross horiz"></div>
       </div>
     </header>
 
@@ -29,18 +31,19 @@
         <input type="text" name="year" id="year">
         <label for="art">Artwork:</label>
         <input type="text" name="art" id="art">
-        <button type="submit" name="button">Add Album</button>
+        <button id="submit-btn" type="submit" name="button">Add Album</button>
       </form>
     </aside>
 
     <main class="stage">
-      <button id="prev" type="button"></button>
+      <div class="arrow" id="prev"></div>
       <div class="landing-pad">
         <div class="album">
-          <div class="front">
+          <div class="face front">
             <img id="currentArt" src="#" alt="">
+            <div class="click-label"><span>click for album info</span></div>
           </div>
-          <div class="back hidden">
+          <div class="face back">
             <ul>
               <li>Title: <span id="display-title"></span></li>
               <li>Artist: <span id="display-artist"></span></li>
@@ -49,7 +52,9 @@
           </div>
         </div>
       </div>
-      <button id="next" type="button"></button>
+      <div class="arrow" id="next"></div>
     </main>
+
   </body>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAWFhYALJqAABiPwkAKysrABwcHAANDQ0AkJCQAIGBgQBjY2MARUVFAMJ2AAAnJycACQkJABwWDQDGeQAAGR0jAENDQwBjPgUAjIyMAAAAAgAWFhYABwcHAF9fXwAyMjIAIyMjABQUFACiYgEABQUFAF49CQB/gYMAsmsAAE5OTgAAAAMAMDAwAIiIiAASEhIAampqAAMDAwBMTEwAbnByAF9hYwCGhoYAHx8fAEFDRQB3d3cAOTMoADs7OwAyKx4AwncAAF88BQAODg4AZmZmAB0XDQBISEgADxMZAGM/BQAqKioAc3NzAAwMDADKfQAARkZGADc3NwBxcXEACgoKABwXDgCjYwEAHhcOAFNTUwBEREQAYD4JADU1NQBNTlEAfn5+AAgICABRUVEAQkJCADMzMwC6cgAAi4uLACQkJAAVFRUAbW1tAAYGBgDAdQAAMTExABMTEwAEBAQAXFxcAH+AggBNTU0ABgkPAC8vLwCHh4cAAQUKADYuIQAREREALikfAAICAgBbOgYAPDw8AB4eHgB2dnYAXTwJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAFlNTYGUAAAAAAAAAAAYmAAAAABVVCjkAAAAAAA0AAAAAAGJlTDRmEQAAADsAAAAAAABXOUtmTypNAAAmAAAAAAAhXiw6XRMjCQANAAAAABQOZ2NhWQctJQEiFgAAAAA1Gx9UTi4oREUvUBwAAAAhRh8AADwyEAUVGlYzOzMkNzgPAAAfHSEAAAAWZVw+PSlfCzECQkEAAAAAUwRaF1JPHjASA0MUAAAAAA0AWAgjT0lIWyEAAAAAACYAAD5dB0lYR0oAAAAAAAA7AAAANkk/JwwcAAAAAAANAAAAAAAYIGQrJgAAACY7AAAAAAAAAAAZUUocFg0AAAAAAPgfAADgBwAAwAMAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAIABAADAAwAA4AcAAPgfAAA=" rel="icon" type="image/x-icon" />
 </html>

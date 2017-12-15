@@ -6,7 +6,10 @@ header {
   height: $header-height;
   background-color: $navy;
   display: flex;
-  font-family: $header-font;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  font-family: $logo-font;
   .logo {
     display: flex;
     align-items: center;
@@ -19,5 +22,15 @@ header {
     height: 60px;
     width: 60px;
     margin: 10px;
+    animation: record-spin 3s linear infinite;
+  }
+}
+
+@keyframes record-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

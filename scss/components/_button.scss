@@ -1,3 +1,51 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+.add-album-btn{
+  position: relative;
+  border-radius: 4px;
+  height: $cross-length + ($cross-pad * 2);
+  width: $cross-length + ($cross-pad * 2);
+  transition: transform .45s ease;
+
+  .cross{
+    box-sizing: border-box;
+    background: $tan;
+    position: absolute;
+  }
+  .cross.vert{
+    height: $cross-length;
+    width: $cross-breadth;
+    left: 50%;
+    top: $cross-pad;
+    transform: translateX(-50%);
+  }
+  .cross.horiz{
+    height: $cross-breadth;
+    width: $cross-length;
+    left: $cross-pad;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.close-button{
+  transform: rotate(135deg);
+}
+
+.arrow{
+  border-top: $arrow-width solid transparent;
+  border-bottom: $arrow-width solid transparent;
+  &#prev{
+    box-sizing: content-box;
+    width: 0;
+    height: 0;
+    border-left: $arrow-width solid transparent;
+    border-right: $arrow-width solid $white;
+  }
+  &#next{
+    width: 0;
+    height: 0;
+    border-right: $arrow-width solid transparent;
+    border-left: $arrow-width solid $white;
+  }
+}

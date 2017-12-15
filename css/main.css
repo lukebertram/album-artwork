@@ -409,7 +409,8 @@ html {
   box-sizing: border-box; }
 
 body {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 h1 {
   margin: 0; }
@@ -505,6 +506,9 @@ header {
   height: 100px;
   background-color: #272838;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
   font-family: "Bungee", cursive; }
   header .logo {
     display: flex;
@@ -515,19 +519,30 @@ header {
   header img {
     height: 60px;
     width: 60px;
-    margin: 10px; }
+    margin: 10px;
+    animation: record-spin 3s linear infinite; }
 
+@keyframes record-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 .add-menu {
   width: 320px;
   position: absolute;
   top: 100px;
-  right: 0;
+  right: -320px;
   background-color: #C1ABA6;
+  font-family: "Roboto", sans-serif;
   padding: 20px;
   border-radius: 4px;
-  z-index: 3; }
+  z-index: 3;
+  transition: right .45s ease-in-out; }
+  .add-menu.menu-show {
+    right: 0; }
   .add-menu h1 {
     font-size: 1.5em;
+    color: #3c3d56;
     text-align: center; }
   .add-menu #new-album {
     display: flex;
@@ -535,23 +550,137 @@ header {
     align-items: center; }
     .add-menu #new-album label {
       margin-top: 16px;
+      color: #464865;
       align-self: flex-start;
-      margin-left: 5px; }
+      margin-left: 15px; }
     .add-menu #new-album input {
       border-radius: 4px;
       line-height: 32px;
       width: 100%;
-      background-color: #a6c395;
+      background-color: #8BB174;
       border-style: inset;
-      border: 2px solid #272838; }
+      border: 2px solid #272838;
+      color: #3c3d56; }
       .add-menu #new-album input:focus {
-        outline-color: #666892; }
+        outline-color: #272838; }
     .add-menu #new-album button {
       margin-top: 40px;
       height: 47px;
       width: 167px;
       border-radius: 7px;
+      color: #ce1504;
       background-color: #8BB174;
       border: 2px solid #272838; }
+      .add-menu #new-album button:focus {
+        outline: none; }
+
+.stage {
+  background-color: #FB4D3D;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: calc(100vh - 100px); }
+
+.landing-pad {
+  perspective: 1000px;
+  width: 500px;
+  height: 500px;
+  position: relative; }
+  .landing-pad .album {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.5s; }
+    .landing-pad .album .face {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      z-index: 2; }
+    .landing-pad .album .click-label {
+      position: absolute;
+      top: 90%;
+      left: 35%;
+      font-size: 1em;
+      color: #C1ABA6;
+      display: none;
+      padding: 5px;
+      border-radius: 4px;
+      background-color: #272838; }
+    .landing-pad .album .front {
+      position: absolute;
+      z-index: 1;
+      cursor: pointer; }
+      .landing-pad .album .front :hover {
+        opacity: 0.8; }
+    .landing-pad .album .back {
+      transform: rotateY(-180deg);
+      background: white;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Roboto", sans-serif;
+      font-size: 2em;
+      line-height: 210%;
+      color: #345995;
+      background-color: #C1ABA6; }
+
+.album.flipped {
+  transform: rotateY(-180deg); }
+
+.album {
+  height: 500px;
+  width: 500px; }
+  .album .front img {
+    width: 100%;
+    border-radius: 5px;
+    border: 3px solid #ffffff; }
+
+.album .front:hover:hover .click-label {
+  display: flex;
+  color: #C1ABA6;
+  opacity: 1; }
+
+.add-album-btn {
+  position: relative;
+  border-radius: 4px;
+  height: 40px;
+  width: 40px;
+  transition: transform .45s ease; }
+  .add-album-btn .cross {
+    box-sizing: border-box;
+    background: #C1ABA6;
+    position: absolute; }
+  .add-album-btn .cross.vert {
+    height: 30px;
+    width: 5px;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%); }
+  .add-album-btn .cross.horiz {
+    height: 5px;
+    width: 30px;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.close-button {
+  transform: rotate(135deg); }
+
+.arrow {
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; }
+  .arrow#prev {
+    box-sizing: content-box;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid #ffffff; }
+  .arrow#next {
+    width: 0;
+    height: 0;
+    border-right: 30px solid transparent;
+    border-left: 30px solid #ffffff; }
 
 /*# sourceMappingURL=main.css.map */
