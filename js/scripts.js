@@ -67,7 +67,7 @@ $(document).ready(function(){
   $('#submit-btn').click(function(){
     $('add-album-btn').toggleClass('close-button');
     $('.add-menu').toggleClass('menu-show');
-
+    $('.add-album-btn').toggleClass('close-button');
   });
 
   //ON FORM SUBMIT: add new album from form input
